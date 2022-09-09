@@ -24,6 +24,10 @@ app.get('/', (req, res) => { // 루트 디렉토리에 라우트
   res.send('Hello World!~~ from.root') // 출력
 })
 
+// swagger
+const { swaggerUi, specs } = require("./swagger/swagger");
+app.use("/swagger-api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
 // app.use로 라우터 경로 연결
 app.use('/api/users', require('./routes/users'));
 
