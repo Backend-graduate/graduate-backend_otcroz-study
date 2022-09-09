@@ -8,10 +8,10 @@ const options = {
         version: '1.0.0',
         description: 'swagger로 api 문서 만들기',
     },
-    host: 'localhost:8000',
+    host: 'localhost:5000',
     basePath: '/'
 },
-apis: ['./routes/*.js', './swagger/*']
+apis: ['./routes/*.js', "./swagger/apis/*"]
 
 }
 
